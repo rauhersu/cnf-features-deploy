@@ -193,24 +193,24 @@ spec:
         workspace: git-auth
     - name: generate-labels
       params:
-          - name: label-templates
-            value:
-              - "build-date=$SOURCE_DATE"
-              - "short-commit=$(tasks.clone-repository.results.short-commit)"
-              - "version=v4.19-$SOURCE_DATE_EPOCH"
-          - name: source-date-epoch
-            value: '$(tasks.clone-repository.results.commit-timestamp)'
+      - name: label-templates
+        value:
+        - "build-date=$SOURCE_DATE"
+        - "short-commit=$(tasks.clone-repository.results.short-commit)"
+        - "version=v4.19-$SOURCE_DATE_EPOCH"
+      - name: source-date-epoch
+        value: '$(tasks.clone-repository.results.commit-timestamp)'
       runAfter:
-          - clone-repository
+      - clone-repository
       taskRef:
-          params:
-            - name: name
-              value: generate-labels
-            - name: bundle
-              value: quay.io/konflux-ci/tekton-catalog/task-generate-labels:0.1@sha256:3f1951bb9a2bc1360e3aa70d96142563c078cba40440ccdd7bf670678f5c84f5
-            - name: kind
-              value: task
-          resolver: bundles
+        params:
+        - name: name
+          value: generate-labels
+        - name: bundle
+          value: quay.io/konflux-ci/tekton-catalog/task-generate-labels:0.1@sha256:3f1951bb9a2bc1360e3aa70d96142563c078cba40440ccdd7bf670678f5c84f5
+        - name: kind
+          value: task
+        resolver: bundles
     - name: prefetch-dependencies
       params:
       - name: input
