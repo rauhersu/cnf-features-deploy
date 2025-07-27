@@ -27,7 +27,7 @@ require (
 	github.com/onsi/ginkgo/v2 v2.22.1
 	github.com/onsi/gomega v1.36.2
 	github.com/open-policy-agent/frameworks/constraint v0.0.0-20230822235116-f0b62fe1e4c4
-	github.com/open-policy-agent/gatekeeper/v3 v3.13.0
+	github.com/open-policy-agent/gatekeeper/v3 v3.20.0
 	github.com/openshift-kni/k8sreporter v1.0.6
 	github.com/openshift-psap/special-resource-operator v0.0.0-00010101000000-000000000000
 	github.com/openshift/api v0.0.0-20230807121159-a81c3efc8824
@@ -192,7 +192,7 @@ replace (
 	github.com/go-log/log => github.com/go-log/log v0.1.0
 	github.com/gorilla/websocket => github.com/gorilla/websocket v1.4.2
 	github.com/mtrmac/gpgme => github.com/mtrmac/gpgme v0.1.1
-	github.com/open-policy-agent/gatekeeper/v3 => github.com/open-policy-agent/gatekeeper/v3 v3.13.0
+	github.com/open-policy-agent/gatekeeper/v3 => github.com/open-policy-agent/gatekeeper/v3 v3.20.0
 	github.com/openshift/client-go => github.com/openshift/client-go v0.0.0-20210521082421-73d9475a9142 // release-4.8
 	github.com/prometheus/prometheus => github.com/prometheus/prometheus v0.46.0
 	github.com/test-network-function/l2discovery-lib => github.com/test-network-function/l2discovery-lib v0.0.5
